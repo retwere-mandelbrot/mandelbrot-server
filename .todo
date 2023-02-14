@@ -1,0 +1,13 @@
+# DOING:
+
+## add rocket (http server lib)
+
+# TODO:
+
+## depend on libmandelbrot
+
+## compile to wasm and include into client, use browser's local storage as image cache
+
+# DONE:
+
+## initialize new project
