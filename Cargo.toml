@@ -10,4 +10,5 @@ name = "mandelbrot-server"
 path = "src/main.rs"
 
 [dependencies]
+mandelbrot = { git = "https://github.com/retwere-mandelbrot/mandelbrot" }
 rocket = "0.5.0-rc.2"
