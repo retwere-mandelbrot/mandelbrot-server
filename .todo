@@ -1,17 +1,18 @@
 # DOING:
 
-## add routes to render tiles
-* calculate bounds
-* render image
-* return PNG data
-
 # TODO:
 
-## add routes to serve & cache tiles
+## Make cache abstract
 mandelbrot-tiles -- directory to store cached tiles.
+
+## dockerize for local hosting
+mount mandelbrot-tiles as volume
 
 ## compile to wasm and include into client
 use browser's local storage as image cache
+
+## publish on github pages (github.io)
+use github actions to compile, publish
 
 # DONE:
 
@@ -23,3 +24,7 @@ https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#specifyin
 
 ## add routes to render tiles
 * add route tilegen/{z}/{x}/{y}
+* calculate bounds
+* render image
+* return PNG data
+* add routes to serve & cache tiles
