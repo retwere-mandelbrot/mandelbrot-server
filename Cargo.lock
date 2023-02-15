@@ -915,7 +915,9 @@ dependencies = [
 name = "mandelbrot-server"
 version = "0.1.0"
 dependencies = [
+ "image",
  "mandelbrot",
+ "num-complex",
  "rocket",
 ]
 

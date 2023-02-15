@@ -1,13 +1,11 @@
 # DOING:
 
-## depend on libmandelbrot
-https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#specifying-dependencies-from-git-repositories
-* publish repos to github
+## add routes to render tiles
+* calculate bounds
+* render image
+* return PNG data
 
 # TODO:
-
-## add routes to render tiles
-to render: calculate bounds, render image,
 
 ## add routes to serve & cache tiles
 mandelbrot-tiles -- directory to store cached tiles.
@@ -19,3 +17,9 @@ use browser's local storage as image cache
 
 ## initialize new project
 ## add rocket (http server lib)
+## depend on libmandelbrot
+https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#specifying-dependencies-from-git-repositories
+* publish repos to github
+
+## add routes to render tiles
+* add route tilegen/{z}/{x}/{y}

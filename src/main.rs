@@ -1,12 +1,27 @@
 #[macro_use]
 extern crate rocket;
 
-#[get("/")]
-fn index() -> &'static str {
-  "Hello, world!"
+use rocket::fs::NamedFile;
+use std::fs;
+use std::path::Path;
+
+mod render;
+use crate::render::render;
+
+#[get("/<zoom>/<x>/<y>")]
+async fn tilegen(zoom: u8, x: i16, y: i16) -> NamedFile {
+  let dir = format!(".cache/{}/{}/", zoom, x);
+  if !Path::exists(Path::new(&dir)) {
+    fs::create_dir_all(&dir).unwrap();
+  }
+  let filename = format!("{}/{}.png", dir, y);
+  if !Path::exists(Path::new(&filename)) {
+    render(&filename, zoom, x, y).unwrap();
+  }
+  NamedFile::open(&filename).await.unwrap()
 }
 
 #[launch]
 fn rocket() -> _ {
-  rocket::build().mount("/", routes![index])
+  rocket::build().mount("/tilegen", routes![tilegen])
 }
