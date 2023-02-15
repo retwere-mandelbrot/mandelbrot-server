@@ -1,13 +1,21 @@
 # DOING:
 
-## add rocket (http server lib)
+## depend on libmandelbrot
+https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#specifying-dependencies-from-git-repositories
+* publish repos to github
 
 # TODO:
 
-## depend on libmandelbrot
+## add routes to render tiles
+to render: calculate bounds, render image,
 
-## compile to wasm and include into client, use browser's local storage as image cache
+## add routes to serve & cache tiles
+mandelbrot-tiles -- directory to store cached tiles.
+
+## compile to wasm and include into client
+use browser's local storage as image cache
 
 # DONE:
 
 ## initialize new project
+## add rocket (http server lib)
