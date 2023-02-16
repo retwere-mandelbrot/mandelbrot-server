@@ -8,7 +8,7 @@ use num_complex::Complex;
 // Renders a tile and saves it in the tile cache.
 pub fn render(filename: &String, zoom: u8, x: i64, y: i64) -> Result<(), ImageError> {
   // Resolution of each tile.
-  let res: u32 = 2048;
+  let res: u32 = 512;
 
   // At zoom 0, the center tile goes from -4.0 to 4.0 in both x and y directions.
   let base: f64 = -4.0;
