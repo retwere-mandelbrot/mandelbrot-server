@@ -9,7 +9,7 @@ mod render;
 use crate::render::render;
 
 #[get("/<zoom>/<x>/<y>")]
-async fn tilegen(zoom: u8, x: i16, y: i16) -> NamedFile {
+async fn tilegen(zoom: u8, x: i64, y: i64) -> NamedFile {
   let dir = format!(".cache/{}/{}/", zoom, x);
   if !Path::exists(Path::new(&dir)) {
     fs::create_dir_all(&dir).unwrap();

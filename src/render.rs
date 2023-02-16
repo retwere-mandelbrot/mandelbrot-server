@@ -6,7 +6,7 @@ use image::ImageFormat;
 use num_complex::Complex;
 
 // Renders a tile and saves it in the tile cache.
-pub fn render(filename: &String, zoom: u8, x: i16, y: i16) -> Result<(), ImageError> {
+pub fn render(filename: &String, zoom: u8, x: i64, y: i64) -> Result<(), ImageError> {
   // Resolution of each tile.
   let res: u32 = 2048;
 
