@@ -2,11 +2,17 @@
 
 # TODO:
 
+## Add/Update READMEs
+instructions for running debug version
+instructions for compiling release version
+instructions for running release version locally
+localhost:
+  3000 -- web
+  6006 -- storybook
+  8000 -- tile server
+
 ## Make cache abstract
 mandelbrot-tiles -- directory to store cached tiles.
-
-## dockerize for local hosting
-mount mandelbrot-tiles as volume
 
 ## compile to wasm and include into client
 use browser's local storage as image cache
